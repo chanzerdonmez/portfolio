@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Style général */
+section {
+    font-family: "Host Grotesk", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.btn-dark {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+.btn-dark:hover {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+.btn-outline-dark {
+    color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+.btn-outline-dark:hover {
+    background-color: #000000 !important;
+    color: white !important;
+}
+
+/* Arrière-plan général */
+.background {
+    background: 
+        /* Cercle principal, vert vif */
+        radial-gradient(circle, 
+            rgba(0, 255, 0, 1) 0%,         /* Vert pur intense au centre */
+            rgb(183, 255, 0) 80%,      /* Vert herbe très saturé */
+            rgba(124, 252, 0, 1) 100%      /* Vert citron éclatant */
+        ),
+        /* Cercle blanc, en haut à gauche */
+        radial-gradient(circle at top left, 
+            rgba(255, 255, 255, 1) 0%,     /* Blanc pur au centre */
+            rgba(255, 255, 255, 0.9) 30%,  /* Blanc intense légèrement diffus */
+            rgba(255, 255, 255, 0) 50%     /* Transition rapide vers la transparence */
+        ),
+        radial-gradient(circle at bottom right, 
+        rgb(255, 255, 255) 0%,     /* Blanc pur au centre */
+        rgba(255, 255, 255, 0) 50%     /* Transition rapide vers la transparence */
+    );
+    width: 100%;
+    height: 100%;
+    background-blend-mode: lighten; /* Accentue la vivacité des couleurs */
+    background-color: rgba(0, 255, 0, 1); /* Fallback pour les anciens navigateurs */
+}
+
+
+
+
+
+/* Contenu au-dessus */
+.background {
+    position: relative;
+    z-index: 2; /* Contenu principal */
+    min-height: 100vh; /* Assure que l'arrière-plan couvre toute la fenêtre */
+}
+
+section, app-navbar {
+    position: relative;
+    z-index: 3; /* Contenu visible au-dessus */
+    flex: 1; /* Remplit l'espace restant entre le navbar et le footer */
+
+}
+
+
+.footer-container {
+    padding-top: 30px;
+}
+
+
+

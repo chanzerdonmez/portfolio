@@ -1,0 +1,63 @@
+<div class="background">
+
+  <app-navbar></app-navbar>
+
+  <section class="container py-5">
+    <div class="row align-items-center">
+      <!-- Contenu principal -->
+      <div class="col-md-6 text-start">
+        <h2 class="display-5 fw-bold mb-3">
+          Vous recherchez <br />un développeur web ?<br />Je donne vie à vos
+          projets.
+        </h2>
+
+        <p class="text-dark">
+          Récemment diplômé des titres RNCP niveau 6 (Bac+2) en Développement
+          Web et Web Mobile, et RNCP niveau 7 (Bac+3/4) en Conception et
+          Développement d’Applications en alternance, je suis un développeur
+          passionné, prêt à transformer vos idées en solutions digitales
+          performantes et sur mesure.
+        </p>
+
+        <p class="text-dark">
+          Vous avez besoin d’un site vitrine, d’une application ou d'une API
+          ?<br />
+          Quelle que soit votre idée, je suis là pour la concrétiser et lui
+          donner vie !
+        </p>
+
+        <div class="mt-4 d-grid gap-2 d-md-flex">
+            <button class="btn btn-dark" [routerLink]="['/contact']">Parlons-en !</button>
+            <button class="btn btn-outline-dark" [routerLink]="['/project']">Explorez mes projets</button>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer-container">
+    <footer>
+      <div
+        class="container d-flex justify-content-between align-items-center py-3"
+      >
+        <!-- Section des icônes -->
+        <div class="d-flex align-items-center">
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            class="me-3 text-dark"
+          >
+            <i class="bi bi-linkedin" style="font-size: 1.8rem"></i>
+          </a>
+          <a href="https://github.com" target="_blank" class="text-dark">
+            <i class="bi bi-github" style="font-size: 1.8rem"></i>
+          </a>
+        </div>
+
+        <!-- Section du texte -->
+        <div>
+          <span class="text">© 2025 chanzer dönmez</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>

@@ -1,0 +1,168 @@
+<div class="background">
+  <app-navbar></app-navbar>
+
+  <section class="container py-5">
+    <div class="row align-items-center">
+      <!-- Colonne gauche -->
+      <div class="col-md-6 text-start">
+        <h2 class="display-5 fw-bold mb-3">
+          Envoyez-moi un message, <br />je ne mords pas ! <br />
+          Promis... 😼
+        </h2>
+        <div class="mb-4">
+          <p>
+            N’hésitez pas à me contacter, que ce soit pour une question, une
+            idée ou un petit coucou. Je vous répondrai dans un délai de 48
+            heures maximum.
+          </p>
+        </div>
+
+        <!-- Message de succès -->
+        <div
+          *ngIf="showSuccessMessage"
+          class="alert alert-success alert-dismissible fade show"
+          role="alert"
+        >
+          Votre message a été envoyé avec succès !
+          <button
+            type="button"
+            class="btn-close"
+            aria-label="Close"
+            (click)="closeAlert()"
+          ></button>
+        </div>
+
+        <!-- Alerte d'erreur -->
+        <div
+          *ngIf="showErrorMessage"
+          class="alert alert-danger alert-dismissible fade show"
+          role="alert"
+        >
+          Une erreur est survenue. Veuillez réessayer.
+          <button
+            type="button"
+            class="btn-close"
+            aria-label="Close"
+            (click)="closeAlert()"
+          ></button>
+        </div>
+
+        <form #contactForm="ngForm" (ngSubmit)="sendEmail(contactForm)">
+          <!-- Adresse e-mail -->
+          <div class="mb-3">
+            <input
+              type="email"
+              class="form-control"
+              id="from_email"
+              name="from_email"
+              placeholder="Adresse e-mail"
+              [(ngModel)]="from_email"
+              required
+              email
+              #fromEmailCtrl="ngModel"
+            />
+            <div
+              *ngIf="
+                fromEmailCtrl.invalid &&
+                (fromEmailCtrl.dirty || fromEmailCtrl.touched)
+              "
+              class="text-danger"
+            >
+              <div *ngIf="fromEmailCtrl.errors?.['required']">
+                L'adresse e-mail est requise.
+              </div>
+              <div *ngIf="fromEmailCtrl.errors?.['email']">
+                Veuillez entrer une adresse e-mail valide.
+              </div>
+            </div>
+          </div>
+
+          <!-- Objet -->
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="subject"
+              name="subject"
+              placeholder="Objet"
+              [(ngModel)]="subject"
+              required
+              #subjectCtrl="ngModel"
+            />
+            <div
+              *ngIf="
+                subjectCtrl.invalid &&
+                (subjectCtrl.dirty || subjectCtrl.touched)
+              "
+              class="text-danger"
+            >
+              <div *ngIf="subjectCtrl.errors?.['required']">L'objet est requis.</div>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="mb-3">
+            <textarea
+              class="form-control"
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Message"
+              [(ngModel)]="message"
+              required
+              #messageCtrl="ngModel"
+            ></textarea>
+            <div
+              *ngIf="
+                messageCtrl.invalid &&
+                (messageCtrl.dirty || messageCtrl.touched)
+              "
+              class="text-danger"
+            >
+              <div *ngIf="messageCtrl.errors?.['required']">
+                Le message est requis.
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- Bouton de soumission -->
+          <div class="mt-4 d-grid gap-2 d-md-flex justify-content-md-start">
+            <button type="submit" id="btn-dark" class="btn btn-primary">
+              Envoyer
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Colonne droite -->
+      <div class="col-md-6">
+        <!-- Contenu à remplir plus tard -->
+      </div>
+    </div>
+  </section>
+
+  <div class="footer-container">
+    <footer>
+      <div
+        class="container d-flex justify-content-between align-items-center py-3"
+      >
+        <!-- Section des icônes -->
+        <div class="d-flex align-items-center">
+          <a href="https://www.linkedin.com" target="_blank" class="me-3 text-dark">
+            <i class="bi bi-linkedin" style="font-size: 1.8rem"></i>
+          </a>
+          <a href="https://github.com" target="_blank" class="text-dark">
+            <i class="bi bi-github" style="font-size: 1.8rem"></i>
+          </a>
+        </div>
+
+        <!-- Section du texte -->
+        <div>
+          <span class="text">© 2025 chanzer dönmez</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>

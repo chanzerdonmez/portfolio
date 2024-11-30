@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap');
+
+.container {
+    font-family: "Host Grotesk", sans-serif;
+    font-optical-sizing: auto;
+}
+
+
+/* Rendre le fond de la navbar transparent */
+.navbar-transparent {
+    background-color: transparent !important; /* Fond transparent */
+    box-shadow: none; /* Retire l'ombre */
+    border: none; /* Retire les bordures si présentes */
+}
+
+/* Style des liens */
+.navbar-transparent .nav-link {
+    color: black !important; /* Liens en noir */
+}
+
+.navbar-transparent .nav-link:hover {
+    color: gray; /* Changement de couleur au survol */
+}
+
+/* Style de la marque */
+.navbar-transparent .navbar-brand {
+    color: black !important; /* Titre en noir */
+    font-weight: 500;
+}
+
+.blinking {
+    animation: blink 1s steps(1, end) infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }

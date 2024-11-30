@@ -1,0 +1,105 @@
+<div class="background">
+  <app-navbar></app-navbar>
+
+  <section class="container py-5">
+    <div class="row align-items-center">
+      <!-- Colonne gauche -->
+      <div class="col-md-6 text-start">
+        <h2 class="display-5 fw-bold mb-3">
+          Il était une fois,<br />un graphiste tombé amoureux du code...
+        </h2>
+        <p>
+          Passionné par l'informatique et le digital, je me suis reconverti dans
+          le développement web en 2023 après cinq ans d'expérience en tant que
+          graphiste. Cette transition m'a permis de combiner ma créativité avec
+          des compétences techniques solides.<br /><br />
+
+          J'ai obtenu un diplôme RNCP niveau 6 (Bac+2) en Développement Web et
+          Web Mobile, suivi d’un RNCP niveau 7 (Bac+3/4) en Conception et
+          Développement d’Applications en alternance. Ces formations m’ont
+          permis de maîtriser des technologies telles que Symfony, PHP, MySQL,
+          Angular, Java, et Spring Boot, tout en consolidant mes compétences en
+          programmation, en conception et en gestion de projets complexes.<br /><br />
+
+          Mon expérience en graphisme est un véritable atout : elle me permet de
+          concevoir des solutions à la fois esthétiques et intuitives, en
+          accordant une attention particulière à l'expérience utilisateur et au
+          design. Aujourd’hui, coder est bien plus qu’un métier : c’est une
+          passion qui nourrit ma soif d'apprentissage et mon envie de relever
+          des défis techniques et créatifs.
+        </p>
+        <h4 class="mt-4">Les technologies qui alimentent mes projets :</h4>
+
+        <!-- Défilement continu des icônes -->
+        <div class="scrolling-icons mt-4">
+          <div #iconsWrapper class="icons-wrapper">
+            <!-- Série d'icônes -->
+            <i class="devicon-symfony-original" style="font-size: 2.5rem; margin: 0 10px;"></i>
+            <i class="devicon-php-plain" style="font-size: 2.5rem; margin: 0 10px;"></i>
+            <i class="devicon-java-plain" style="font-size: 2.5rem; margin: 0 10px;"></i>
+            <i class="devicon-spring-plain" style="font-size: 2.5rem; margin: 0 10px;"></i>
+            <i class="devicon-html5-plain" style="font-size: 2.5rem; margin: 0 10px;"></i>
+            <i class="devicon-css3-plain" style="font-size: 2.5rem; margin: 0 10px;"></i>
+            <i class="devicon-angularjs-plain" style="font-size: 2.5rem; margin: 0 10px;"></i>
+            <i class="devicon-mysql-plain" style="font-size: 2.5rem; margin: 0 10px;"></i>
+            <i class="devicon-javascript-plain" style="font-size: 2.5rem; margin: 0 10px;"></i>
+            <i class="devicon-vscode-plain" style="font-size: 2.5rem; margin: 0 10px;"></i>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- Colonne droite -->
+      <div class="col-md-6">
+        <!-- Contenu à remplir plus tard -->
+      </div>
+    </div>
+  </section>
+
+  <div class="footer-container">
+    <footer>
+      <div
+        class="container d-flex justify-content-between align-items-center py-3"
+      >
+        <!-- Section des icônes -->
+        <div class="d-flex align-items-center">
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            class="me-3 text-dark"
+          >
+            <i class="bi bi-linkedin" style="font-size: 1.8rem"></i>
+          </a>
+          <a href="https://github.com" target="_blank" class="text-dark">
+            <i class="bi bi-github" style="font-size: 1.8rem"></i>
+          </a>
+        </div>
+
+        <!-- Section du texte -->
+        <div>
+          <span class="text">© 2025 chanzer dönmez</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<style>
+/* Conteneur principal */
+.scrolling-icons {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 3rem; /* Ajustez selon la taille des icônes */
+}
+
+/* Wrapper des icônes */
+.icons-wrapper {
+  display: flex;
+  white-space: nowrap; /* Empêche les retours à la ligne */
+  transform: translateX(0); /* Déplacement initial */
+  will-change: transform; /* Optimisation pour une animation fluide */
+}
+
+
+</style>
